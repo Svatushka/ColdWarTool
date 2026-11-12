@@ -1,5 +1,11 @@
 # ☢️ Cold War Tools (Roblox)
 
+[🇷🇺 Русский](#-русский) | [🇬🇧 English](#-english)
+
+---
+
+## 🇷🇺 Русский
+
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![Platform](https://img.shields.io/badge/platform-Windows%20x64-lightgrey)
 ![Python](https://img.shields.io/badge/python-3.10%2B-green)
@@ -7,11 +13,11 @@
 
 **Cold War Tools** — это десктопная утилита для игроков в плейс Cold War на платформе Roblox. Приложение объединяет в себе продвинутый баллистический калькулятор и интерактивную тактическую карту для планирования действий и точной стрельбы.
 
-🌐 **Официальный сайт:** [Ссылка на ваш сайт (Netlify/Cloudflare)] *(замените на реальную ссылку после публикации)*
+🌐 **Официальный сайт:** [Ссылка на ваш сайт (Netlify/Cloudflare)](https://github.com/Svatushka/ColdWarTool) *(замените на реальную ссылку после публикации)*
 
 ---
 
-## ✨ Основные возможности
+### ✨ Основные возможности
 
 *   **📊 Баллистический калькулятор:**
     *   Точный расчёт падения пули (bullet drop) и времени полёта (time of flight).
@@ -28,17 +34,15 @@
 
 ---
 
-## 🖼️ Скриншоты
-
-*(Замените ссылки на ваши реальные скриншоты, загрузив их в папку `screenshots` в репозитории)*
+### 🖼️ Скриншоты
 
 | Вкладка «Баллистика» | Вкладка «Тактическая карта» |
 | :---: | :---: |
-| ![Ballistics](https://i.yapx.ru/eYyoT.png) | ![Tactical Map](https://i.yapx.ru/eYyoS.png) |
+| ![Ballistics](https://github.com/Svatushka/ColdWarTool/blob/main/screenshots/ballistics.PNG?raw=true) | ![Tactical Map](https://github.com/Svatushka/ColdWarTool/blob/main/screenshots/map.PNG?raw=true) |
 
 ---
 
-## 🚀 Установка
+### 🚀 Установка
 
 Для пользователей Windows предусмотрен удобный установщик.
 
@@ -49,5 +53,60 @@
 > ⚠️ **Важно:** Windows SmartScreen может предупредить о «непроверенном издателе», так как проект не имеет платной цифровой подписи. Нажмите **«Подробнее» → «Выполнить в любом случае»**.
 
 **SHA-256 хеш установщика:**
+```text
+9198CCC752C1B1F0FED57E4B8C4911F513AED5B3B94421FB60CA7617109781C4```
+
+---
+
+## GB English
+# ☢️ Cold War Tools (Roblox)
+
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![Platform](https://img.shields.io/badge/platform-Windows%20x64-lightgrey)
+![Python](https://img.shields.io/badge/python-3.10%2B-green)
+![License](https://img.shields.io/badge/license-Proprietary-red)
+
+**Cold War Tools** is a desktop utility for players of the Cold War experience on the Roblox platform. The application combines an advanced ballistics calculator and an interactive tactical map for action planning and precise shooting.
+
+🌐 **Official Website:** [Link to your website](https://github.com/Svatushka/ColdWarTool) *(replace with the real link after publishing)*
+
+---
+
+## ✨ Key Features
+
+*   **📊 Ballistics Calculator:**
+    *   Precise calculation of bullet drop and time of flight.
+    *   Lead calculation for moving targets.
+    *   Real-time interactive trajectory graph visualization.
+    *   Weapon database (bullet velocity for various guns).
+*   **🗺️ Tactical Map:**
+    *   Load custom maps (PNG) from the game.
+    *   Annotation tools: pencil, lines, arrows, rectangles, ellipses, and text.
+    *   Convenient zoom (mouse wheel) and panning (hold RMB/MMB).
+    *   Save the annotated map as PNG.
+*   **🌐 Localization:** Full Russian and English support (one-click toggle).
+*   **⚡ Standalone:** The app works fully offline, does not require administrator rights, and leaves no system junk behind.
+
+---
+
+## 🖼️ Screenshots
+
+| «Ballistics» Tab | «Tactical Map» Tab |
+| :---: | :---: |
+| ![Ballistics](https://github.com/Svatushka/ColdWarTool/blob/main/screenshots/ballistics.PNG?raw=true) | ![Tactical Map](https://github.com/Svatushka/ColdWarTool/blob/main/screenshots/map.PNG?raw=true) |
+
+---
+
+## 🚀 Installation
+
+A convenient installer is provided for Windows users.
+
+1. Go to the [**Releases**](../../releases/latest) section.
+2. Download the latest `ColdWarTools_Setup_v1.0.0.exe` file.
+3. Run the installer and follow the instructions (takes less than a minute).
+
+> ⚠️ **Important:** Windows SmartScreen may warn about an "unverified publisher" since the project does not have a paid digital certificate. Click **"More info" → "Run anyway"**.
+
+**Installer SHA-256 hash:**
 ```text
 9198CCC752C1B1F0FED57E4B8C4911F513AED5B3B94421FB60CA7617109781C4
