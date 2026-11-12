@@ -1,6 +1,6 @@
 # ☢️ Cold War Tools (Roblox)
 
-[🇷🇺 Русский](#-русский) | [🇬🇧 English](#-english)
+[🇷🇺 Русский](README.md) | [🇬🇧 English](README.eng.md)
 
 ---
 
@@ -55,4 +55,3 @@
 **SHA-256 хеш установщика:**
 ```text
 9198CCC752C1B1F0FED57E4B8C4911F513AED5B3B94421FB60CA7617109781C4```
-
