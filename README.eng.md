@@ -11,7 +11,7 @@
 
 **Cold War Tools** is a desktop utility for players of the Cold War place on the Roblox platform. The application combines an advanced ballistics calculator and an interactive tactical map for action planning and precise shooting.
 
-🌐 **Official Website:** [Link to your website (Netlify/Cloudflare)](https://github.com/Svatushka/ColdWarTool) *(replace with the real link after publishing)*
+🌐 **Official Website:** [Cold War Tool](https://coldwartool.netlify.app/) 
 
 ---
 
