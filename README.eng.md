@@ -1,5 +1,9 @@
 # ☢️ Cold War Tools (Roblox)
 
+[🇷🇺 Русский](README.md) | [🇬🇧 English](README.eng.md)
+
+---
+
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![Platform](https://img.shields.io/badge/platform-Windows%20x64-lightgrey)
 ![Python](https://img.shields.io/badge/python-3.10%2B-green)
