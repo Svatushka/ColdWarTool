@@ -34,7 +34,7 @@
 
 | Вкладка «Баллистика» | Вкладка «Тактическая карта» |
 | :---: | :---: |
-| ![Ballistics](screenshots/ballistics.png) | ![Tactical Map](screenshots/map.png) |
+| ![Ballistics](https://i.yapx.ru/eYyoT.png) | ![Tactical Map](https://i.yapx.ru/eYyoS.png) |
 
 ---
 
