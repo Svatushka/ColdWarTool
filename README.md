@@ -6,7 +6,8 @@
 
 ## 🇷🇺 Русский
 
-![Version](https://img.shields.io/badge/version-Beta-1.0.0.1-blue)
+![Version](https://img.shields.io/badge/version-1.0.0.1-blue)
+![Status](https://img.shields.io/badge/status-beta-orange)
 ![Platform](https://img.shields.io/badge/platform-Windows%20x64-lightgrey)
 ![Python](https://img.shields.io/badge/python-3.10%2B-green)
 ![License](https://img.shields.io/badge/license-Proprietary-red)
