@@ -238,35 +238,77 @@ COLOR_TEXT = "#dcdcdc"
 COLOR_TEXT_MUTED = "#8a8a8a"
 COLOR_GREEN = "#4ade80"
 
+# =====================================================================
+# ОБНОВЛЁННЫЕ ДАННЫЕ ОРУЖИЯ
+# =====================================================================
 WEAPONS_BY_FACTION = {
     "NATO": {
-        "Sniper Rifles": {"LW3 - Tundra": 580, "M82": 525, "Pelington 703": 478},
-        "Tactical Rifles": {"AUG": 775, "M16": 725, "DMR 14": 700},
-        "Assault Rifles": {"C58": 730, "FARA 83": 729, "EM2": 688, "Krig 6": 686, "QBZ-83": 671, "XM4": 657, "FFAR 1": 629},
-        "LMGs": {"M60": 791, "Stoner 63": 714},
-        "Shotguns": {"Hauer 77": 850, "Gallo SA12": 850, "Streetsweeper": 850},
-        "SMGs": {"LC10": 410, "KSP 45": 265, "TEC-9": 258, "Milano 821": 225, "MAC 10": 200},
-        "Handguns": {"Magnum": 313, "1911": 200},
+        "Sniper Rifles": {
+            "PSG-1": 862,
+            "M21": 853,
+            "M21 SF": 853,
+            "M14": 853,
+            "M24": 786,
+        },
+        "Assault Rifles": {
+            "M16A2": 962,
+            "M16A1": 960,
+            "M16A2/M203": 960,
+            "L85A1": 935,
+            "FAMAS F1": 930,
+            "CAR-15 SF": 910,
+            "L1A1": 823,
+            "CAR-15": 810,
+            "G3A3": 800,
+        },
+        "LMGs": {
+            "L86A1": 935,
+            "M249": 915,
+            "M60": 853,
+            "L7A2": 840,
+        },
+        "SMGs": {
+            "MP5SD": 400,
+            "MAT-49": 400,
+        },
+        "Shotguns": {
+            "Ithaca 37": 365,
+        },
+        "Handguns": {
+            "M9": 381,
+        },
+        "Launchers": {
+            "M72A3": 295,
+            "M-67": 213,
+        },
     },
     "Warsaw Pact": {
-        "Sniper Rifles": {"ZRG 20mm": 923, "Swiss K31": 684},
-        "Tactical Rifles": {"Type 63": 625, "CARV.2": 605},
-        "Assault Rifles": {"AK-47": 702, "Groza": 660},
-        "LMGs": {"RPD": 684, "MG82": 603},
-        "Shotguns": {"Hauer 77": 850, "Gallo SA12": 850},
-        "SMGs": {"AK-74u": 383, "Bullfrog": 250},
-        "Handguns": {"Magnum": 313},
+        "Assault Rifles": {
+            "Type 63A": 991,
+            "AKM-Prop": 715,
+        },
+        "LMGs": {
+            "MG3": 820,
+        },
+        "SMGs": {
+            "Vz. 22": 396,
+            "MAT-49": 400,
+        },
+        "Launchers": {
+            "Stopper": 293,
+            "Kinalak": 76,
+        },
     },
 }
 
 CATEGORIES = {
     "Sniper Rifles": {"ru": "Снайперские винтовки", "en": "Sniper Rifles"},
-    "Tactical Rifles": {"ru": "Тактические винтовки", "en": "Tactical Rifles"},
     "Assault Rifles": {"ru": "Штурмовые винтовки", "en": "Assault Rifles"},
     "LMGs": {"ru": "Пулемёты", "en": "LMGs"},
     "Shotguns": {"ru": "Дробовики", "en": "Shotguns"},
     "SMGs": {"ru": "Пистолеты-пулемёты", "en": "SMGs"},
     "Handguns": {"ru": "Пистолеты", "en": "Handguns"},
+    "Launchers": {"ru": "Гранатомёты", "en": "Launchers"},
     "NATO": {"ru": "НАТО", "en": "NATO"},
     "Warsaw Pact": {"ru": "Варшавский договор", "en": "Warsaw Pact"},
 }
@@ -274,7 +316,7 @@ CATEGORIES = {
 GRAVITY = 9.8
 
 UI_TEXT = {
-    "title": {"ru": "☢️ COLD WAR TOOLS", "en": "☢️ COLD WAR TOOLS"},
+    "title": {"ru": "☢️ COLD WAR TOOLS 1.0.0.1 BETA", "en": "☢️ COLD WAR TOOLS 1.0.0.1 BETA"},
     "btn_lang": {"ru": "🌐 EN", "en": "🌐 RU"},
     "tab_calc": {"ru": "Баллистика", "en": "Ballistics"},
     "tab_map": {"ru": "Тактическая карта", "en": "Tactical Map"},
@@ -347,6 +389,8 @@ README_CONTENT = """COLD WAR TOOLS — ТАКТИЧЕСКИЕ КАРТЫ
   valley_view.png    — Valley View
   khokhlovka.png     — Khokhlovka
   vavidas.png        — Vavidas
+  wukong_delta.png   — Wukong Delta
+  zts_rudna.png      — ZTS Rudna
 """
 
 
@@ -491,6 +535,10 @@ class BallisticsTab(ctk.CTkFrame):
         self.category_combo.set(CATEGORIES[self.current_category][lang])
         weapons = list(WEAPONS_BY_FACTION[self.current_faction][self.current_category].keys())
         self.weapon_combo.configure(values=weapons)
+        
+        if self.current_weapon not in weapons and weapons:
+            self.current_weapon = weapons[0]
+            
         self.weapon_combo.set(self.current_weapon)
         self.on_weapon_change()
 
@@ -501,6 +549,7 @@ class BallisticsTab(ctk.CTkFrame):
                 self.current_faction = f
                 break
         self.current_category = list(WEAPONS_BY_FACTION[self.current_faction].keys())[0]
+        self.current_weapon = list(WEAPONS_BY_FACTION[self.current_faction][self.current_category].keys())[0]
         self._refresh_combos()
 
     def on_category_change(self, choice):
@@ -634,6 +683,8 @@ class MapTab(ctk.CTkFrame):
         "Valley View": {"file": "valley_view.png", "desc": "Пригород Аляски"},
         "Khokhlovka": {"file": "khokhlovka.png", "desc": "Деревня в СССР"},
         "Vavidas": {"file": "vavidas.png", "desc": "Побережье Кубы"},
+        "Wukong Delta": {"file": "wukong_delta.png", "desc": "Речная дельта"},
+        "ZTS Rudna": {"file": "zts_rudna.png", "desc": "Промышленная зона"},
     }
     TOOLS = ["pencil", "line", "arrow", "rect", "ellipse", "text"]
     TOOL_ICONS = {
@@ -1124,7 +1175,7 @@ class MainApp(ctk.CTk):
         super().__init__()
         ctk.set_appearance_mode("dark")
         self.lang = "ru"
-        self.title("Cold War Tools")
+        self.title("Cold War Tools 1.0.0.1 Beta")
         self.geometry("1100x700")
         self.minsize(950, 600)
         self.configure(fg_color=COLOR_BG)
@@ -1165,14 +1216,12 @@ class MainApp(ctk.CTk):
         if not os.path.exists(ico):
             debug_log(f"[ICON] not found: {ico}")
             return
-        # iconbitmap — работает на Windows и в .exe
         try:
             self.iconbitmap(ico)
             debug_log(f"[ICON] window icon set from {ico}")
             return
         except Exception as e:
             debug_log(f"[ICON] iconbitmap failed: {e}")
-        # fallback через iconphoto (PNG) — если вдруг .ico не принят
         try:
             png = resource_path("icon.png")
             if os.path.exists(png):
